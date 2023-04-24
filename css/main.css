@@ -1,0 +1,28 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#logo{
+  width: 7rem;
+}
+
+#mynavbar * {
+  color: rgb(189, 189, 189);
+}
+#mynavbar{
+  background-color: #353A40;
+}
+
+#mynavbar .navbar-brand{
+  color: white;
+}
+
+#mynavbar .active {
+  color: white;
+  font-weight: 500;
+}
+
+#mynavbar .compra {
+  color: rgb(25, 153, 25);
+  font-weight: 400;
+}
