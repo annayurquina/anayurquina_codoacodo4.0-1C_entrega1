@@ -26,3 +26,65 @@
   color: rgb(25, 153, 25);
   font-weight: 400;
 }
+
+.banner-descripcion{
+  width: 40%;
+  text-align: right;
+  position: relative;
+}
+
+.texto-descripcion{
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  /*background-color: brown;*/
+  /*background: url("../img/ba1.jpg");
+  background-size: cover;
+  background-position: center;*/
+  color: white;
+  position: relative;
+}
+.texto-descripcion::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: url("../img/ba1.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+}
+
+
+.cabecera{
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  /*color: var(--bs-card-cap-color);*/
+  /*background-color: rgba(var(--bs-body-color-rgb), 0.03);;*/
+}
+
+.slash {
+  background-color: #353A40;
+  color: white;
+}
+
+.nomap {
+  width: 45%;
+}
+
+.link-puntos {
+  /*border-style: dotted;*/
+  border-bottom: 0.2rem dotted grey;
+}
+
+/*.img-carrusel {
+  background-image: url("../img/ba3.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}*/
+.carrusel-alto {
+  max-height: 25rem;
+  min-height: 25rem;
+}
