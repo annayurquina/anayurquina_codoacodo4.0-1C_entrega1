@@ -88,3 +88,8 @@
   max-height: 25rem;
   min-height: 25rem;
 }
+
+footer {
+  background-color: #1D506D;
+  color: white;
+}
