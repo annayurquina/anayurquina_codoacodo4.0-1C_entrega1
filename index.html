@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <nav id="mynavbar" class="navbar navbar-expand-lg">
+    <nav id="mynavbar" class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid mx-5">
         <div class="d-flex align-items-center">
           <figure><img id="logo" src="./img/codoacodo.png" alt="logo_codo_a_codo"></figure>
@@ -21,20 +21,20 @@
         </button>
         <div class="collapse navbar-collapse " id="contenido_menu_navbar">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
+            <a class="nav-link active" aria-current="page" href="#conferencia">La conferencia</a>
             <a class="nav-link" href="#">Los oradores</a>
             <a class="nav-link" href="#">El lugar y la fecha</a>
-            <a class="nav-link">Conviértete en orador</a>
-            <a class="nav-link compra">Comprar tickets</a>
+            <a class="nav-link" href="#">Conviértete en orador</a>
+            <a class="nav-link compra" href="#">Comprar tickets</a>
           </div>
         </div>
       </div>
     </nav>
-    <div class="d-flex flex-column align-items-end pe-5 bg-black texto-descripcion ">
+    <div class="d-flex justify-content-end bg-black texto-descripcion">
       <div class="banner-descripcion">
-        <h1>Conf Bs As</h1>
-        <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembbreos del evento, a otros estudiantes de Codo a Codo y los otradores de primer nivel que tenemos para ti. Te esperamos!</p>
-        <div class="d-flex justify-content-end">
+        <h1 id="conferencia">Conf Bs As</h1>
+        <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los otradores de primer nivel que tenemos para ti. Te esperamos!</p>
+        <div class="btn-text-descr">
           <button type="button" class="btn btn-outline-secondary border border-light text-light me-3" href="#">Quiero ser orador</button>
           <button type="button" class="btn btn-success" href="#">Comprar Tickets</button>
         </div>
@@ -44,10 +44,10 @@
       <section class="d-flex flex-column align-items-center">
         <p class="text-uppercase mt-3">conoce a los oradores</p>
         <h3 class="text-uppercase">oradores</h3>
-        <div class="d-flex justify-content-evenly mb-5">
-          <div class="card w-25">
+        <div class="contenedor-cards d-flex justify-content-evenly mb-5 p-lg-5">
+          <div class="card">
             <figure>
-              <img src="./img/steve.jpg" alt="steve_jobs" class="card-img-top">
+              <img src="./img/steve.jpg" alt="steve_jobs" class="card-img-top imagen-card">
             </figure>
             <div class="cabecera">
               <div type="button" class="btn btn-warning fw-bolder">JavaScript</div>
@@ -58,9 +58,9 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat saepe quibusdam ex quod temporibus neque corrupti modi fugit quae. Distinctio accusamus accusantium fuga iure odit reiciendis voluptate ipsa earum non optio, pariatur ea minus adipisci soluta. Dolores, recusandae. Iusto consequatur quaerat quis! Dolore molestias eos quia ex blanditiis nesciunt qui!</p>
             </div>
           </div>
-          <div class="card w-25">
+          <div class="card">
             <figure>
-              <img src="./img/bill.jpg" alt="bill_gates" class="card-img-top">
+              <img src="./img/bill.jpg" alt="bill_gates" class="card-img-top imagen-card">
             </figure>
             <div class="cabecera">
               <div type="button" class="btn btn-warning fw-bolder">JavaScript</div>
@@ -71,9 +71,9 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat saepe quibusdam ex quod temporibus neque corrupti modi fugit quae. Distinctio accusamus accusantium fuga iure odit reiciendis voluptate ipsa earum non optio, pariatur ea minus adipisci soluta. Dolores, recusandae. Iusto consequatur quaerat quis! Dolore molestias eos quia ex blanditiis nesciunt qui!</p>
             </div>
           </div>
-          <div class="card w-25">
+          <div class="card">
             <figure>
-              <img src="./img/ada.jpeg" alt="ada_lovelace" class="card-img-top">
+              <img src="./img/ada.jpeg" alt="ada_lovelace" class="card-img-top imagen-card">
             </figure>
             <div class="cabecera">
               <div type="button" class="btn btn-secondary fw-bolder">Negocios</div>
@@ -89,9 +89,9 @@
       <div id="carrusel-auto" class="carousel slide" data-bs-ride="true">
         <div class="carousel-inner">
           <div class="carousel-item  carrusel-alto active">
-            <div class="w-100 d-flex">
-              <img src="./img/ba3.jpg" alt="buenos_aires" class="w-50">
-              <div class="slash w-50 pt-4 px-5 ms-1">
+            <div class="w-100 d-flex card-carrusel">
+              <img src="./img/ba3.jpg" alt="buenos_aires" class="imagen-carrusel">
+              <div class="slash">
                 <h2>Bs As - Octubre</h2>
                 <p>Buenos Aires es la gran capital cosmopolita de Argentina. Su centro es la Plaza de Mayo, rodeada de imponentes edificios del siglo XIX, incluida la Casa Rosada, el icónico palacio presidencial que tiene varios balcones. Entre otras atracciones importantes, se incluyen el Teatro Colón, un lujoso teatro de ópera de 1908 con cerca de 2,500 asientos, y el moderno museo MALBA, que exhibe arte latinoamericano</p>
                 <button type="button" class="btn btn-outline-light">Conocé más</button>
@@ -99,9 +99,9 @@
             </div>
           </div>
           <div class="carousel-item carrusel-alto">
-            <div class="w-100 d-flex">
-              <img src="./img/honolulu.jpg" alt="honolulu" class="w-50">
-              <div class="slash w-50 pt-4 px-5 ms-1">
+            <div class="w-100 d-flex card-carrusel">
+              <img src="./img/honolulu.jpg" alt="honolulu" class="imagen-carrusel">
+              <div class="slash">
                 <h2>Hawaii - Noviembre</h2>
                 <p>Honolulu, en la costa sur de la isla de Oahu, es la capital de Hawái y la vía de acceso a la cadena de islas de EE.UU. El barrio de Waikiki es un centro de restaurantes, vida nocturna y comercio, famoso por su icónica playa con forma de medialuna bordeada de palmeras y hoteles de muchos pisos y con el cráter volcánico Diamond Head en lo alto a la distancia. Los sitios relacionados con el ataque a Pearl Harbor en la Segunda Guerra Mundial incluyen el USS Arizona Memorial.</p>
                 <button type="button" class="btn btn-outline-light">Conocé más</button>
@@ -109,9 +109,9 @@
             </div>
           </div>
           <div class="carousel-item carrusel-alto">
-            <div class="w-100 d-flex">
-              <img src="./img/hawaii2.jpg" alt="hawaii" class="w-50">
-              <div class="slash w-50 pt-4 px-5 ms-1">
+            <div class="w-100 d-flex card-carrusel">
+              <img src="./img/hawaii2.jpg" alt="hawaii" class="imagen-carrusel">
+              <div class="slash">
                 <h2>Honolulu - Diciembre</h2>
                 <p>Hawái, un estado de los EE.UU., es un archipiélago volcánico aislado en el Pacífico central. Sus islas son famosas por sus paisajes escabrosos de riscos, cascadas, follaje tropical y playas con arenas doradas, rojas, negras e incluso verdes. De las 6 islas principales, Oahu tiene la capital y la ciudad más grande de Hawái, Honolulu, donde se encuentra la playa de media luna Waikiki y los memoriales de la Segunda Guerra Mundial en Pearl Harbor.</p>
                 <button type="button" class="btn btn-outline-light">Conocé más</button>
@@ -134,8 +134,8 @@
         <p>Anótate como orador para dar una <span class="link-puntos link-offset-3">charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
       </div>
       <div class="d-flex justify-content-center">
-        <form action="" class="d-flex flex-column w-50 was-validated">
-          <div class="d-flex justify-content-between">
+        <form action="" class="contenedor-form d-flex flex-column was-validated">
+          <div class="contenedor-input d-flex justify-content-between">
             <input class="form-control mb-3 nomap" type="text" placeholder="Nombre" required>
             <input class="form-control mb-3 nomap" type="text" placeholder="Apellido" required>
           </div>
@@ -148,13 +148,14 @@
       </div>
     </main>
     <footer class="d-flex justify-content-evenly py-4 align-items-center flex-wrap">
-      <p>Preguntas frecuentes</p>
-      <p>Contáctanos</p>
-      <p>Prensa</p>
-      <p>Conferencias</p>
-      <p class="text-break">Términos y condiciones</p>
-      <p>Privacidad</p>
-      <p>Estudiantes</p>
+      <a  href="#">Preguntas frecuentes</a>
+      <a  href="#">Contáctanos</a>
+      <a  href="#">Prensa</a>
+      <a  href="#">Conferencias</a>
+      <a  href="#" class="text-break">Términos y condiciones</a>
+      <a  href="#">Privacidad</a>
+      <a  href="#">Estudiantes</a>
+      <a></a>
     </footer>
   </header>
 

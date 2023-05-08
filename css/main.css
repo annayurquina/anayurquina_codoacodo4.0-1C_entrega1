@@ -31,6 +31,7 @@
   width: 40%;
   text-align: right;
   position: relative;
+  padding-right: 5rem;
 }
 
 .texto-descripcion{
@@ -50,7 +51,7 @@
   height: 100%;
   top: 0;
   right: 0;
-  background: url("../img/ba1.jpg");
+  background-image: url("../img/ba1.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.4;
@@ -67,6 +68,8 @@
 .slash {
   background-color: #353A40;
   color: white;
+  width: 50%;
+  padding: 2rem 4rem 1rem 4rem;
 }
 
 .nomap {
@@ -85,11 +88,114 @@
   background-repeat: no-repeat;
 }*/
 .carrusel-alto {
-  max-height: 25rem;
-  min-height: 25rem;
+  /*max-height: 25rem;
+  min-height: 25rem;*/
 }
 
 footer {
   background-color: #1D506D;
   color: white;
+}
+
+.contenedor-cards{
+
+}
+
+.imagen-card {
+  /*max-width: 3rem;*/
+  min-height: 23rem;
+  max-height: 23rem;
+  object-fit: cover;
+}
+.btn-text-descr{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imagen-carrusel{
+  width: 50%;
+}
+.card{
+  width: 30%;
+}
+
+.contenedor-form {
+  width: 50%;
+}
+
+footer>a {
+  text-decoration: none;
+  color: white;
+}
+
+footer>a:hover{
+  color: black;
+}
+
+.nav-link:hover{
+  color:red
+}
+footer{
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width:600px) {
+  body {
+    background-color: red;
+  }
+
+  .banner-descripcion {
+    width: 100%;
+    text-align: center;
+    padding: 3rem;
+  }
+  .btn-text-descr{
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 75%;
+    margin: 3rem 5rem;
+  }
+  .contenedor-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card-carrusel{
+    /*background-color: yellow;*/
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imagen-carrusel{
+    width: 100%;
+    min-height: 30rem;
+    
+  }
+  .slash{
+    width: 100%;
+  }
+
+  .carrusel-alto{
+    height: auto;
+  }
+  
+
+  .nomap{
+    width: 100%;
+  }
+
+  .contenedor-form{
+    /*background-color: pink;*/
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .contenedor-input {
+    display: flex;
+    flex-direction: column;
+    /*background-color: red;*/
+  }
 }
