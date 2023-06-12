@@ -55,7 +55,7 @@ a{
 }
 
 /*css card*/
-.contenedor-cards{
+.contenedor-cards, .contenedor-categorias{
   display: flex;
   justify-content: space-evenly;
 }
@@ -194,9 +194,30 @@ footer>a:hover {
   }
 }
 
+/*----------------compra tickets----------------*/
 
+.navbar-nav .nav-link.active{
+  font-weight: bolder;
+  color: #97C93E;
+}
+.h3-negrita{
+  font-weight: 600;
+}
 
+#formulario-ticket {
+  display: flex;
+  flex-direction: column;
+}
 
+.btn-compra-ticket {
+  background-color: #97C93E;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.btn-compra-ticket:hover {
+  background-color: rgb(191, 255, 63);
+}
 
 @media only screen and (min-width:577px) and (max-width:768px) {
   .contenedor-cards{
