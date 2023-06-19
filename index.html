@@ -138,7 +138,7 @@
         <p>Anótate como orador para dar una <span class="link-puntos link-offset-3">charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
       </div>
       <div class="d-flex justify-content-center">
-        <form action="" class="contenedor-form d-flex flex-column" novalidate>
+        <form action="" class="contenedor-form d-flex flex-column needs-validation" novalidate>
           <div class="contenedor-username mb-3">
             <input class="form-control username" type="text" placeholder="Nombre">
             <input class="form-control username" type="text" placeholder="Apellido">
@@ -150,84 +150,95 @@
           <button type="submit" disabled class="btn btn-success my-5" data-bs-toggle="button" autocomplete="off">Enviar</button>
         </form>
       </div>
-      <div id="compra-tickets" class="mx-5 mb-5 pb-5">
-        <div class="contenedor-categorias">
-          <div class="card border border-primary text-center">
-            <div class="card-header border-0 bg-white">
-              <h3 class="h3-negrita">Estudiante</h3>
-            </div>
-            <div class="card-body">
-              <h4>Tienen un descuento</h4>
-              <h3 class="h3-negrita">80%</h3>
-            </div>
-            <div class="card-footer border-top-0 bg-white">
-              <div class="text-secondary">* presentar documentación</div>
-            </div>
+      <div class="contenedor-cards mx-5">
+        <div class="card border border-primary text-center">
+          <div class="card-header border-0 bg-white">
+            <h3 class="h3-negrita">Estudiante</h3>
           </div>
-          <div class="card border border-info text-center">
-            <div class="card-header border-0 bg-white">
-              <h3 class="h3-negrita">Trainee</h3>
-            </div>
-            <div class="card-body">
-              <h4>Tienen un descuento</h4>
-              <h3 class="h3-negrita">50%</h3>
-            </div>
-            <div class="card-footer border-top-0 bg-white">
-              <div class="text-secondary">* presentar documentación</div>
-            </div>
+          <div class="card-body">
+            <h4>Tienen un descuento</h4>
+            <h3 class="h3-negrita">80%</h3>
           </div>
-          <div class="card border border-warning text-center">
-            <div class="card-header border-0 bg-white">
-              <h3 class="h3-negrita">Junior</h3>
-            </div>
-            <div class="card-body">
-              <h4>Tienen un descuento</h4>
-              <h3 class="h3-negrita">15%</h3>
-            </div>
-            <div class="card-footer border-top-0 bg-white">
-              <div class="text-secondary">* presentar documentación</div>
-            </div>
+          <div class="card-footer border-top-0 bg-white">
+            <div class="text-secondary">* presentar documentación</div>
           </div>
         </div>
-        <div class="mx-5">
-          <div class="text-center mb-4">
-            <p class="text-secondary text-uppercase">Venta</p>
-            <h2 class="text-uppercase">valor de ticket $200</h2>
+        <div class="card border border-info text-center">
+          <div class="card-header border-0 bg-white">
+            <h3 class="h3-negrita">Trainee</h3>
           </div>
-          <form id="formulario-ticket needs-validation">
-            <div class="contenedor-username mb-3">
-              <input class="username form-control" type="text" placeholder="Nombre" id="nombre-ticket" name="nombre-ticket" required>
-              
-              <input class="form-control username" type="text" placeholder="Apellido" id="apellido-ticket" name="apellido-ticket" required>
-            </div>
-            <input class="mb-3 form-control" type="email" placeholder="Correo" id="email-ticket" name="email-ticket" required>
-            
-            <div class="contenedor-username mb-5">
-              <div class="d-flex flex-column username">
-                <label for="cantidad-ticket">Cantidad</label>
-                <input class="form-control" type="number" name="cantidad-ticket" placeholder="cantidad" min="1" max="10" id="cantidad-ticket" value="1" required>
-              </div>
+          <div class="card-body">
+            <h4>Tienen un descuento</h4>
+            <h3 class="h3-negrita">50%</h3>
+          </div>
+          <div class="card-footer border-top-0 bg-white">
+            <div class="text-secondary">* presentar documentación</div>
+          </div>
+        </div>
+        <div class="card border border-warning text-center">
+          <div class="card-header border-0 bg-white">
+            <h3 class="h3-negrita">Junior</h3>
+          </div>
+          <div class="card-body">
+            <h4>Tienen un descuento</h4>
+            <h3 class="h3-negrita">15%</h3>
+          </div>
+          <div class="card-footer border-top-0 bg-white">
+            <div class="text-secondary">* presentar documentación</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mb-4">
+        <p class="text-secondary text-uppercase">Venta</p>
+        <h2 class="text-uppercase">valor de ticket $200</h2>
+      </div>
+      <div id="compra-tickets" class="d-flex justify-content-center mb-5">
+        <form action="" id="formulario-ticket" class="contenedor-form d-flex flex-column needs-validation" novalidate>
+          <div class="contenedor-username mb-3">
+            <div class="d-flex flex-column username">
+              <input class="form-control" type="text" placeholder="Nombre" id="nombre-ticket" name="nombre-ticket" required>
               <div class="invalid-feedback">
-                Proporciona un email válido.
-              </div>
-              <div class="d-flex flex-column username">
-                <label for="categoria-ticket">Categoría</label>
-                <div></div>
-                <select name="categoria-ticket" class="form-select" id="categoria-ticket" required>
-                  <option value="estudiante">Estudiante</option>
-                  <option value="trainee">Trainee</option>
-                  <option value="junior">Junior</option>
-                </select>
-                
+                Proporcione un nombre válido.
               </div>
             </div>
-            <p id="mensaje_total" name="mensaje_total" class="form-control border border-1 border-info-subtle bg-info-subtle text-primary">Total a pagar es: $</p>
-            <div class="contenedor-username">
-              <button id="btn-borrar" type="button" class="btn btn-compra-ticket username py-3">Borrar</button>
-              <button id="btn-resumen" type="submit" class="btn btn-compra-ticket username py-3">Resumen</button>
+            <div class="d-flex flex-column username">
+              <input class="form-control" type="text" placeholder="Apellido" id="apellido-ticket" name="apellido-ticket" required>
+              <div class="invalid-feedback">
+                Proporcione un apellido válido.
+              </div>
             </div>
-          </form>
-        </div>
+          </div>
+          <input class="form-control" type="email" placeholder="Correo" id="email-ticket" name="email-ticket" required>
+          <div class="mb-3 invalid-feedback">
+            Proporcione un email válido.
+          </div>
+          
+          <div class="contenedor-username mb-5">
+            <div class="d-flex flex-column username">
+              <label for="cantidad-ticket">Cantidad</label>
+              <input class="form-control" type="number" name="cantidad-ticket" placeholder="cantidad" min="1" max="10" id="cantidad-ticket" value="1" required onclick="total_pago()" onkeyup="total_pago()">
+              <div class="mb-3 invalid-feedback">
+                Proporcione un valor entre [1,9].
+              </div>
+            </div>
+            <div class="d-flex flex-column username">
+              <label for="categoria-ticket">Categoría</label>
+              <div></div>
+              <select name="categoria-ticket" class="form-select" id="categoria-ticket" required>
+                <option id="cat-regular" value="regular" onclick="total_pago()">Regular</option>
+                <option value="estudiante" onclick="total_pago()">Estudiante</option>
+                <option value="trainee" onclick="total_pago()">Trainee</option>
+                <option value="junior" onclick="total_pago()">Junior</option>
+              </select>
+              
+            </div>
+          </div>
+          <p id="mensaje_total" name="mensaje_total" class="form-control border border-1 border-info-subtle bg-info-subtle text-primary">Total a pagar es: $</p>
+          <div class="contenedor-username">
+            <a id="btn-borrar" onclick="borrar_form()" class="btn btn-compra-ticket username py-3">Borrar</a>
+            <a id="btn-resumen" onclick="validacion()" class="btn btn-compra-ticket username py-3">Resumen</a>
+          </div>
+        </form>
       </div>
 
 
@@ -236,70 +247,6 @@
 
 
 
-      <!--<form class="row g-3 needs-validation" novalidate>
-        <div class="col-md-4">
-          <label for="validationCustom01" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-          <div class="valid-feedback">
-            ¡Se ve bien!
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustom02" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-          <div class="valid-feedback">
-            ¡Se ve bien!
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustomUsername" class="form-label">Nombre de usuario</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-            <div class="invalid-feedback">
-              Por favor, elije un nombre de usuario.
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="validationCustom03" class="form-label">Ciudad</label>
-          <input type="text" class="form-control" id="validationCustom03" required>
-          <div class="invalid-feedback">
-            Proporciona una ciudad válida.
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">Estado</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">Elige...</option>
-            <option>...</option>
-          </select>
-          <div class="invalid-feedback">
-            Selecciona un estado válido.
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom05" class="form-label">Código postal</label>
-          <input type="text" class="form-control" id="validationCustom05" required>
-          <div class="invalid-feedback">
-            Proporciona un código postal válido.
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class="form-check-label" for="invalidCheck">
-              Acepta los términos y condiciones
-            </label>
-            <div class="invalid-feedback">
-              Debe estar de acuerdo antes de enviar.
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Enviar formulario</button>
-        </div>
-      </form>-->
     </main>
     <footer class="d-flex justify-content-evenly py-4 align-items-center flex-wrap">
       <a href="#">Preguntas frecuentes</a>

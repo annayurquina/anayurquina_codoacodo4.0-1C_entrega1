@@ -55,7 +55,7 @@ a{
 }
 
 /*css card*/
-.contenedor-cards, .contenedor-categorias{
+.contenedor-cards{
   display: flex;
   justify-content: space-evenly;
 }
@@ -202,11 +202,6 @@ footer>a:hover {
 }
 .h3-negrita{
   font-weight: 600;
-}
-
-#formulario-ticket {
-  display: flex;
-  flex-direction: column;
 }
 
 .btn-compra-ticket {
